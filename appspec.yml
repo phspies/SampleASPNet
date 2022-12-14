@@ -1,0 +1,11 @@
+version: 0.0
+os: windows
+files:
+  - source: \SampleASPNetApp
+    destination: c:\inetpub\wwwroot
+  
+hooks:
+  ApplicationStop:
+    - location: .\StopServer.ps1
+  ApplicationStart:
+    - location: .\StartServer.ps1
