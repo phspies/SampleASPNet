@@ -5,7 +5,7 @@ files:
     destination: c:\inetpub\wwwroot
   
 hooks:
-  ApplicationStop:
+  BeforeInstall:
     - location: .\StopServer.ps1
-  ApplicationStart:
+  AfterInstall:
     - location: .\StartServer.ps1
