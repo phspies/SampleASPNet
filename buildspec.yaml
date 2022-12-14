@@ -1,0 +1,15 @@
+version: 0.2
+
+env:
+  variables:
+    PROJECT: SampleASPNetApp
+phases:
+  build:
+    commands:
+      - msbuild $env:PROJECT.csproj
+artifacts:
+  files:
+  - '**\*'
+  - 'appspec.yml'
+  - 'StopServer.ps1'
+  - 'StartServer.ps1'
